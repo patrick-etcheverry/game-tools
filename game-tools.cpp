@@ -1,4 +1,10 @@
-﻿#include "game-tools.h"
+﻿﻿/**
+ * @file game-tools.cpp
+ * @author Patrick Etcheverry
+ * @brief Corps du module game-tools
+ * @date 2021-07-12
+ */
+#include "game-tools.h"
 
 #include <cstdlib> // pour la fonction rand
 #include <time.h>  // // pour réinitialiser rand via time

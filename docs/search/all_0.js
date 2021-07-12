@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['affichernombreencouleur',['afficherNombreEnCouleur',['../game-tools_8cpp.html#ad0398dcd6f51dfb8e6260102fdc1f334',1,'afficherNombreEnCouleur(double nombre, Couleur couleur, bool retourALaLigne):&#160;game-tools.cpp'],['../game-tools_8h.html#a8fa26d48f2b7d359b65f1c055dcbf4f0',1,'afficherNombreEnCouleur(double nombre, Couleur couleur, bool retourALaLigne=false):&#160;game-tools.cpp']]],
+  ['affichertexteencouleur',['afficherTexteEnCouleur',['../game-tools_8cpp.html#a988efa54e8e9d6149a4c4f0a4b96c053',1,'afficherTexteEnCouleur(string chaine, Couleur couleur, bool retourALaLigne):&#160;game-tools.cpp'],['../game-tools_8cpp.html#a542bf4fe6767747342379f1c960abc92',1,'afficherTexteEnCouleur(char caractere, Couleur couleur, bool retourALaLigne):&#160;game-tools.cpp'],['../game-tools_8h.html#adbbd4829a453e019d6a07c3c2101658a',1,'afficherTexteEnCouleur(string chaine, Couleur couleur, bool retourALaLigne=false):&#160;game-tools.cpp'],['../game-tools_8h.html#a4c4dae644eb3c594364027125ff1aaff',1,'afficherTexteEnCouleur(char caractere, Couleur couleur, bool retourALaLigne=false):&#160;game-tools.cpp']]]
+];

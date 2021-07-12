@@ -1,4 +1,10 @@
-﻿#include "game-tools.h"
+﻿/**
+ * @file main.cpp
+ * @author Patrick Etcheverry
+ * @brief un petit programme de démonstration illustrant les fonctionnalités du module game-tools  
+ * @date 2021-07-12
+ */
+#include "game-tools.h"
 #include <iostream>
 using namespace std;
 
