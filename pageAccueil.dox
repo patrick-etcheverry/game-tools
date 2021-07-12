@@ -1,0 +1,16 @@
+/*! \mainpage %game-tools
+
+  \section a-propos A propos
+ 
+<b>game-tools</b> est un petit module C++ contenant des sous-programmes utiles pour développer 
+des petits jeux s'exécutant dans une console. Ce module est mis à disposition des étudiants
+dans le cadre de la *SAE 1.1 Implémentation d'un besoin client*.
+
+Les fonctionnalités proposées dans ce petit module permettent :
+- d'afficher du texte en couleur ;
+- d'effacer l'écran ;
+- de mettre l'exécution du programme en pause durant un temps déterminé 
+ou jusqu'à ce que l'utilisateur appuie sur une touche ;
+- de générer un nombre entier aléatoire compris dans un intervalle donné.
+
+ */
