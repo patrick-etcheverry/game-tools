@@ -52,7 +52,7 @@ int main(void)
    nombreAleatoire = random(0, 100);
 
    // Afficher le nombre aléatoire
-   cout << nombreAleatoire << endl;
+   cout << "Un entier aleatoire compris entre 0 et 100 : " << nombreAleatoire << endl;
 
   return 0;
 }
@@ -141,7 +141,7 @@ int main(void)
 }
 ```
 
-![Afficher un texte en couleur](screenshots/nombre-en-couleur.jpg)
+![Afficher des nombres en couleur](screenshots/nombre-en-couleur.jpg)
 
 
 
@@ -163,7 +163,9 @@ int main(void)
     // Afficher un triangle coloré de manière progressive
     cout << "** Un triangle en couleur qui s'affiche progressivement **" << endl;
 
-    pause(); // Pas de durée spécifiée -> code mis en pause jusqu'à ce que l'utilisateur appuie sur une touche
+    /* Pas de durée spécifiée : 
+       -> code mis en pause jusqu'à ce que l'utilisateur appuie sur une touche */
+    pause();  
 
     afficherTexteEnCouleur("*", bleu, true);
     pause(1); // Exécution mise en pause pendant 1 seconde.
