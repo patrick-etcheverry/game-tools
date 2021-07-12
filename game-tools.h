@@ -23,4 +23,6 @@ void afficherTexteEnCouleur(char caractere, Couleur couleur, bool retourALaLigne
 
 void afficherNombreEnCouleur(double nombre, Couleur couleur, bool retourALaLigne = false);
 
+int random(int min, int max);
+
 #endif

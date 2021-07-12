@@ -1,5 +1,15 @@
 ﻿#include "game-tools.h"
 
+#include <cstdlib> // pour la fonction rand
+#include <time.h>  // // pour réinitialiser rand via time
+
+int random(int min, int max)
+{
+    srand((unsigned int)time(0));
+    return rand() % (max + 1 - min) + min;
+}
+
+
 void afficherTexteEnCouleur(string chaine, Couleur couleur, bool retourALaLigne)
 {
     HANDLE idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);

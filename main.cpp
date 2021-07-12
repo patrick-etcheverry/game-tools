@@ -24,5 +24,9 @@ int main(void)
     afficherTexteEnCouleur("des ", violet, false);
     afficherTexteEnCouleur("optimistes", jaune, true);
 
+    // Afficher un entier aléatoire compris en 0 et 100
+    cout << "Un entier aleatoire compris entre 0 et 100 : ";
+    cout << random(0, 100) << endl;
+
     return 0;
 }
