@@ -58,6 +58,10 @@ int main(void)
 }
 ```
 
+![Générer un nombre entier aléatoire](screenshots/aleatoire.jpg)
+
+
+
 ### Afficher du texte en couleur
 
 Le module *game-tools* propose un sous-programme `afficherTexteEnCouleur` qui permet d'afficher une chaîne de caractères (ou un caractère) dans une couleur particulière. Suite à l'affichage de la chaîne il est éventuellement possible d'ajouter un saut de ligne (voir exemple dans le code ci-dessous).
@@ -90,6 +94,10 @@ int main(void)
    return 0;
 }
 ```
+
+![Afficher un texte en couleur](screenshots/texte-en-couleur.jpg)
+
+
 **Remarque**
 
 La procédure `afficherTexteEnCouleur` peut également afficher de simples caractères en couleur. Par exemple :
@@ -133,6 +141,10 @@ int main(void)
 }
 ```
 
+![Afficher un texte en couleur](screenshots/nombre-en-couleur.jpg)
+
+
+
 ### Mettre en pause 
 
 La procédure `pause` permet de stopper l'exécution du code durant un temps déterminé ou jusqu'à ce que l'utilisateur appuie sur une touche.
@@ -168,6 +180,10 @@ int main(void)
     return 0;
 }
 ```
+
+![Faire des pauses](screenshots/triangle.gif)
+
+
 
 ### Effacer le contenu du terminal 
 
@@ -214,4 +230,6 @@ int main(void)
     return 0;
 }
 ```
+
+![Effacer l'écran](screenshots/triangle2.gif)
 
