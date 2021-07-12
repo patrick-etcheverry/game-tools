@@ -27,4 +27,6 @@ int random(int min, int max);
 
 void pause(unsigned int dureeEnSecondes = 0);
 
+void effacer();
+
 #endif

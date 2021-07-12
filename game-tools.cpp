@@ -25,6 +25,48 @@ void pause(unsigned int dureeEnSecondes)
     }
 }
 
+void effacer(void)
+{
+    HANDLE idTerminal;
+    CONSOLE_SCREEN_BUFFER_INFO caracteristiquesTerminal;
+    DWORD count;
+    DWORD nbreCellulesDansTerminal;
+    COORD coordonneesOrigine = {0, 0};
+
+    idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);
+    if (idTerminal == INVALID_HANDLE_VALUE)
+    {
+        return;
+    }
+
+    /* Calculer le nombre de cellules du terminal */
+    if (!GetConsoleScreenBufferInfo(idTerminal, &caracteristiquesTerminal))
+    {
+        return;
+    }
+    nbreCellulesDansTerminal = caracteristiquesTerminal.dwSize.X * caracteristiquesTerminal.dwSize.Y;
+
+    /* Remplir le terminal avec des espaces */
+    if (!FillConsoleOutputCharacter(idTerminal, (TCHAR)' ', nbreCellulesDansTerminal, coordonneesOrigine, &count))
+    {
+        return;
+    }
+
+    /*Remplir le terminal avec les couleurs courantes */
+    if (!FillConsoleOutputAttribute(
+            idTerminal,
+            caracteristiquesTerminal.wAttributes,
+            nbreCellulesDansTerminal,
+            coordonneesOrigine,
+            &count))
+    {
+        return;
+    }
+
+    /* Déplacer le curseur au début du terminal */
+    SetConsoleCursorPosition(idTerminal, coordonneesOrigine);
+}
+
 void afficherTexteEnCouleur(string chaine, Couleur couleur, bool retourALaLigne)
 {
     HANDLE idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);
