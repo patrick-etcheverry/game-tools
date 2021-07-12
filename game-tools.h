@@ -25,4 +25,6 @@ void afficherNombreEnCouleur(double nombre, Couleur couleur, bool retourALaLigne
 
 int random(int min, int max);
 
+void pause(unsigned int dureeEnSecondes = 0);
+
 #endif

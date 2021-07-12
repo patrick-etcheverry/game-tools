@@ -24,6 +24,18 @@ int main(void)
     afficherTexteEnCouleur("des ", violet, false);
     afficherTexteEnCouleur("optimistes", jaune, true);
 
+    // Afficher un triangle coloré de manière progressive
+    cout << "** Un triangle en couleur qui s'affiche progressivement **" << endl;
+    afficherTexteEnCouleur("*", bleu, true);
+    pause(1);
+    afficherTexteEnCouleur("**", vert, true);
+    pause(1);
+    afficherTexteEnCouleur("***", cyan, true);
+    pause(1);
+    afficherTexteEnCouleur("****", rouge, true);
+    pause(1);
+    afficherTexteEnCouleur("******", jaune, true);
+
     // Afficher un entier aléatoire compris en 0 et 100
     cout << "Un entier aleatoire compris entre 0 et 100 : ";
     cout << random(0, 100) << endl;
