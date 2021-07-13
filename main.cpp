@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file main.cpp
  * @author Patrick Etcheverry
  * @brief un petit programme de démonstration illustrant les fonctionnalités du module game-tools  

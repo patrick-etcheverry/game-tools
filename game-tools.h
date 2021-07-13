@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file game-tools.h
  * @author Patrick Etcheverry
  * @brief Fichier d'entête du module game-tools

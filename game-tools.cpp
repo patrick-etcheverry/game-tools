@@ -1,4 +1,4 @@
-﻿﻿/**
+﻿/**
  * @file game-tools.cpp
  * @author Patrick Etcheverry
  * @brief Corps du module game-tools
