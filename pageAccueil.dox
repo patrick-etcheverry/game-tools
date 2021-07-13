@@ -13,4 +13,6 @@ Les fonctionnalités proposées dans ce petit module permettent :
 ou jusqu'à ce que l'utilisateur appuie sur une touche ;
 - de générer un nombre entier aléatoire compris dans un intervalle donné.
 
+Le code source du projet est disponible sur <a href="https://github.com/patrick-etcheverry/game-tools">ce dépôt Github</a>.
+
  */
