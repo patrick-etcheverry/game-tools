@@ -18,7 +18,9 @@ La documentation Doxygen du projet est disponible sur <a href="https://patrick-e
 
 Télécharger les fichiers `game-tools.h` et `game-tools.cpp` présents dans ce dépôt puis ajoutez les à votre code.
 
-**Exemple** : En supposant que :
+**Exemple**
+
+En supposant que :
 - le code de votre jeu se trouve dans le fichier `main.cpp`,
 - les fichiers `game-tools.h` et `game-tools.cpp` se trouvent dans le même répertoire que le fichier `main.cpp`,
 
@@ -34,7 +36,13 @@ int main(void)
 }
 ```
 
+**Fichier de démo**
+
+Si vous voulez tester le module `game-tools` vous pouvez également récupérer le fichier `main.cpp` : il contient un petit programme de démonstration qui illustre l'usage des différentes fonctionnalités proposées par `game-tools`. 
+
+
 ## Utilisation
+
 
 ### Générer un nombre entier aléatoire
 
