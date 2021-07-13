@@ -101,7 +101,7 @@ int main(void)
 
     /* Affiche le mot "optimistes" en jaune AVEC retour à la ligne 
        (car utilisation de la valeur true en dernier paramètre) */
-
+    afficherTexteEnCouleur("optimistes", jaune, true);
    return 0;
 }
 ```
