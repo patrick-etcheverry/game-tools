@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file game-tools.cpp
  * @author Patrick Etcheverry
  * @brief Corps du module game-tools
@@ -6,13 +6,16 @@
  */
 #include "game-tools.h"
 
-#include <cstdlib> // pour la fonction rand
-#include <time.h>  // // pour réinitialiser rand via time
+#include <random> // pour la fonction random
+
 #include <conio.h> // pour la fonction _getch utilisée dans la procédure pause()
+
 int random(int min, int max)
 {
-    srand((unsigned int)time(0));
-    return rand() % (max + 1 - min) + min;
+    thread_local std::mt19937 intervalle(std::random_device{}());
+    std::uniform_real_distribution<double> dist(min, max+1);
+
+    return dist(intervalle);
 }
 
 void pause(unsigned int dureeEnSecondes)
