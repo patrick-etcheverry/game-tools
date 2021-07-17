@@ -80,7 +80,7 @@ void afficherTexteEnCouleur(string chaine, Couleur couleur, bool retourALaLigne)
 {
     HANDLE idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(idTerminal, couleur);
-    cout << chaine;
+    cout << chaine << flush;
     SetConsoleTextAttribute(idTerminal, gris);
     if (retourALaLigne)
     {
@@ -92,7 +92,7 @@ void afficherTexteEnCouleur(char caractere, Couleur couleur, bool retourALaLigne
 {
     HANDLE idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(idTerminal, couleur);
-    cout << caractere;
+    cout << caractere << flush;
     SetConsoleTextAttribute(idTerminal, gris);
     if (retourALaLigne)
     {
@@ -104,7 +104,7 @@ void afficherNombreEnCouleur(double nombre, Couleur couleur, bool retourALaLigne
 {
     HANDLE idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(idTerminal, couleur);
-    cout << nombre;
+    cout << nombre << flush;
     SetConsoleTextAttribute(idTerminal, gris);
     if (retourALaLigne)
     {
