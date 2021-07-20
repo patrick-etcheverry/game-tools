@@ -72,12 +72,41 @@ int main(void)
 ![Générer un nombre entier aléatoire](screenshots/aleatoire.jpg)
 
 
+### Manipuler des couleurs
+Le module *game-tools* met à disposition un type `Couleur` qui peut être utilisé pour déclarer des variables représentant des couleurs :  
+
+```cpp
+#include "game-tools.h"
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+   Couleur maCouleurPreferee; // une variable de type Couleur
+
+   return 0;
+}
+```
+
+Les variables de type `Couleur` peuvent prendre les valeurs suivantes bleu, vert, cyan, rouge, violet, jaune ou blanc :
+```cpp
+#include "game-tools.h"
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+   Couleur maCouleurPreferee; 
+   maCouleurPreferee = bleu;
+
+   return 0;
+}
+```
+
 
 ### Afficher du texte en couleur
 
-Le module *game-tools* propose un sous-programme `afficherTexteEnCouleur` qui permet d'afficher une chaîne de caractères (ou un caractère) dans une couleur particulière. Suite à l'affichage de la chaîne il est éventuellement possible d'ajouter un saut de ligne (voir exemple dans le code ci-dessous).
-
-Les couleurs disponibles sont les suivantes : bleu, vert, cyan, rouge, violet, jaune et blanc.
+Le module *game-tools* propose un sous-programme `afficherTexteEnCouleur` qui permet d'afficher une chaîne de caractères (ou un caractère) dans une couleur particulière. Cette couleur particulière sera de type `Couleur` (voir section précédente). Suite à l'affichage de la chaîne il est éventuellement possible d'ajouter un saut de ligne (voir exemple dans le code ci-dessous).
 
 Le code ci-dessous donne quelques exemples d'usage du sous-programme `afficherTexteEnCouleur` :
 ```cpp
@@ -119,11 +148,9 @@ afficherTexteEnCouleur('A', cyan, false); // Affiche le caractère A en bleu cya
 
 ### Afficher des nombres en couleur
 
-La procédure `afficherNombreEnCouleur` permet d'afficher des nombres avec une couleur particulière. Son fonctionnement est similaire à celui de la procédure `afficherTexteEnCouleur`.
+La procédure `afficherNombreEnCouleur` permet d'afficher des nombres avec une couleur particulière. Son fonctionnement est similaire à celui de la procédure `afficherTexteEnCouleur`. Les couleurs utilisées devront être de type `Couleur` (voir section correspondante ci-dessus).
 
 Les nombres à afficher en couleur peuvent être des nombres entiers ou des nombres à virgule. Suite à l'affichage d'un nombre il est également possible d'ajouter un saut de ligne (voir exemple dans le code ci-dessous).
-
-Les couleurs disponibles sont les suivantes : bleu, vert, cyan, rouge, violet, jaune et blanc.
 
 Le code ci-dessous donne quelques exemples d'usage du sous-programme `afficherNombreEnCouleur` :
 ```cpp
