@@ -1,7 +1,8 @@
 
 # game-tools
 
-game-tools est un petit module C++ contenant des sous-programmes utiles pour développer des petits jeux s'exécutant dans une console. Ce module est mis à disposition des étudiants dans le cadre de la SAE 1.1 Implémentation d'un besoin client.
+game-tools est un petit module C++ contenant des sous-programmes utiles pour développer des petits jeux s'exécutant dans un terminal. Ce module met à disposition des fonctionnalités simples permettant d'effacer le terminal, de mettre le programme en pause,
+d'afficher des éléments en couleur ou encore de générer un nombre entier aléatoire.
 
 Cette version du module `game-tools` n'est utilisable que sur des systèmes d'exploitation **windows**.
 
