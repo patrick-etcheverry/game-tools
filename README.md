@@ -107,7 +107,9 @@ int main(void)
 
 ### Afficher du texte en couleur
 
-Le module *game-tools* propose un sous-programme `afficherTexteEnCouleur` qui permet d'afficher une chaîne de caractères (ou un caractère) dans une couleur particulière. Cette couleur particulière sera de type `Couleur` (voir section précédente). Suite à l'affichage de la chaîne il est éventuellement possible d'ajouter un saut de ligne (voir exemple dans le code ci-dessous).
+Le module *game-tools* propose un sous-programme `afficherTexteEnCouleur` qui permet d'afficher une chaîne de caractères (ou un caractère) dans une couleur particulière. Cette couleur particulière sera de type `Couleur` (voir section précédente).
+
+ Suite à l'affichage de la chaîne il est éventuellement possible d'ajouter un saut de ligne (voir exemple dans le code ci-dessous).
 
 Le code ci-dessous donne quelques exemples d'usage du sous-programme `afficherTexteEnCouleur` :
 ```cpp
@@ -139,12 +141,21 @@ int main(void)
 ![Afficher un texte en couleur](screenshots/texte-en-couleur.jpg)
 
 
-**Remarque**
+**Remarques**
 
-La procédure `afficherTexteEnCouleur` peut également afficher de simples caractères en couleur. Par exemple :
+- La procédure `afficherTexteEnCouleur` peut également afficher de simples caractères en couleur. Par exemple :
 ```cpp
 afficherTexteEnCouleur('A', cyan, false); // Affiche le caractère A en bleu cyan.
 ```
+- Par défaut, aucun retour à la ligne n'est ajouté suite à l'affichage du texte. Ainsi, lorsqu'aucun retour à la ligne n'est nécessaire, on peut aussi bien écrire :
+```cpp
+afficherTexteEnCouleur("Tous ", bleu, false); 
+```
+que :
+```cpp
+afficherTexteEnCouleur("Tous ", bleu); 
+```
+
 
 
 ### Afficher des nombres en couleur
@@ -182,7 +193,16 @@ int main(void)
 
 ![Afficher des nombres en couleur](screenshots/nombre-en-couleur.jpg)
 
+**Remarque**
 
+Par défaut, aucun retour à la ligne n'est ajouté suite à l'affichage du nombre. Ainsi, lorsqu'aucun retour à la ligne n'est nécessaire, on peut aussi bien écrire :
+```cpp
+afficherNombreEnCouleur(5, bleu, false);
+```
+que :
+```cpp
+afficherNombreEnCouleur(5, bleu);
+```
 
 ### Mettre en pause 
 
