@@ -2,20 +2,22 @@
  * @file game-tools.cpp
  * @author Patrick Etcheverry
  * @brief Corps du module game-tools
- * @date 2021-07-12
+ * @date 2021-09-16
  */
 #include "game-tools.h"
 
-#include <random> // pour la fonction random
-
-#include <conio.h> // pour la fonction _getch utilisée dans la procédure pause()
+#include <conio.h> // pour la fonction getch utilisée dans la procédure pause()
+#include <chrono>  // pour la fonction now() utilisée dans la fonction random()
+#include <random>  // pour la fonction random
 
 int random(int min, int max)
 {
-    thread_local std::mt19937 intervalle(std::random_device{}());
-    std::uniform_real_distribution<double> dist(min, max+1);
+    std::default_random_engine generateur;
+    std::uniform_int_distribution<int> distributionNombres;
+    unsigned int tempsActuel = static_cast<unsigned int>(chrono::steady_clock::now().time_since_epoch().count());
+    generateur.seed(tempsActuel);
 
-    return dist(intervalle);
+    return ((distributionNombres(generateur) % (max + 1)) + min);
 }
 
 void pause(unsigned int dureeEnSecondes)
