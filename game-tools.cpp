@@ -10,22 +10,22 @@
 #include <chrono>  // pour la fonction now() utilisée dans la fonction random()
 #include <random>  // pour la fonction random
 
-int random(int min, int max)
+int random (int min, int max)
 {
     std::default_random_engine generateur;
     std::uniform_int_distribution<int> distributionNombres;
     unsigned int tempsActuel = static_cast<unsigned int>(chrono::steady_clock::now().time_since_epoch().count());
     generateur.seed(tempsActuel);
 
-    return ((distributionNombres(generateur) % (max + 1)) + min);
+    return ((distributionNombres(generateur) % (max - min + 1)) + min);
 }
 
-void pause(unsigned int dureeEnSecondes)
+void pause (unsigned int dureeEnSecondes)
 {
     if (dureeEnSecondes == 0)
     {
         char touche;
-        touche = _getch();
+        touche = char(getch());
         touche = ' ';
         cout << touche << endl;
     }
@@ -36,7 +36,7 @@ void pause(unsigned int dureeEnSecondes)
     }
 }
 
-void effacer(void)
+void effacer (void)
 {
     HANDLE idTerminal;
     CONSOLE_SCREEN_BUFFER_INFO caracteristiquesTerminal;
@@ -78,7 +78,7 @@ void effacer(void)
     SetConsoleCursorPosition(idTerminal, coordonneesOrigine);
 }
 
-void afficherTexteEnCouleur(string chaine, Couleur couleur, bool retourALaLigne)
+void afficherTexteEnCouleur (string chaine, Couleur couleur, bool retourALaLigne)
 {
     HANDLE idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(idTerminal, couleur);
@@ -90,7 +90,7 @@ void afficherTexteEnCouleur(string chaine, Couleur couleur, bool retourALaLigne)
     }
 }
 
-void afficherTexteEnCouleur(char caractere, Couleur couleur, bool retourALaLigne)
+void afficherTexteEnCouleur (char caractere, Couleur couleur, bool retourALaLigne)
 {
     HANDLE idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(idTerminal, couleur);
@@ -102,7 +102,7 @@ void afficherTexteEnCouleur(char caractere, Couleur couleur, bool retourALaLigne
     }
 }
 
-void afficherNombreEnCouleur(double nombre, Couleur couleur, bool retourALaLigne)
+void afficherNombreEnCouleur (double nombre, Couleur couleur, bool retourALaLigne)
 {
     HANDLE idTerminal = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(idTerminal, couleur);
